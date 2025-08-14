@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // Setup Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // your frontend URL
+        origin: "https://whatsapp-clone-ylzj.onrender.com/", // your frontend URL
         credentials: true
     }
 });

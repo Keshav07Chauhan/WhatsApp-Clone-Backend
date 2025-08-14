@@ -6,7 +6,7 @@ const app = express()
 
 const allowedOrigins = [
   "http://localhost:5173",          // dev
-  "https://your-frontend-domain.com" // prod, it will be updated after deployment
+  "https://whatsapp-clone-ylzj.onrender.com" // prod, it will be updated after deployment
 ];
 
 app.use(cors({
