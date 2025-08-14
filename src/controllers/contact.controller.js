@@ -28,7 +28,7 @@ const getContactsList = asyncHandler(async (req, res) => {
         const myContactId = req.contact._id;
         // console.log(req.contact)
         const me = await Contact.findById(myContactId)
-            // .populate("contacts", "_id wa_id name");
+            .populate("contacts", "_id wa_id name");
 
         if (!me) {
             throw new ApiError(404,"User not found")
