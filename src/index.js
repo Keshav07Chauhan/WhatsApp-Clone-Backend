@@ -7,6 +7,10 @@ import { Server } from "socket.io";
 import { setupSocket } from "./socket/socketHandler.js";
 
 dotenv.config({ path: './.env' });
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://whatsapp-clone-ylzj.onrender.com"
+];
 
 // Create HTTP server using express app
 const server = http.createServer(app);
@@ -14,7 +18,7 @@ const server = http.createServer(app);
 // Setup Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: "https://whatsapp-clone-ylzj.onrender.com/", // your frontend URL
+        origin: allowedOrigins, // your frontend URL
         credentials: true
     }
 });
